@@ -1,3 +1,6 @@
+<?php 
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,10 +18,16 @@
             <div class="searchBar">
                 <input type="text" class="search" placeholder="Search...">
             </div>
-            <div class="HomeBts">
-                <a href="LogIn.php"><button class="login">Log in</button></a>
-                <a href="SignUp.php"><button class="login">Sign up</button></a>
-            </div>
+            <?php if(isset($_SESSION['login'])):?>
+                Cześć, <?=$_SESSION['login']?>
+                <a href="logout.php">Wyloguj</a>
+                <?php else :?>
+                    <div class="HomeBts">
+                        <a href="LogIn.php"><button class="login">Log in</button></a>
+                        <a href="SignUp.php"><button class="login">Sign up</button></a>
+                    </div>
+                <?php endif;?>
+            
         </div>
     </div>
 </body>
