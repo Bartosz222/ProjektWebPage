@@ -20,6 +20,7 @@ body{
     font-weight: bold;
     font-size: 38px;
     padding: 5px;
+    margin-bottom: 40px;
 }
 .logo::before{
     display: inline-block;
@@ -36,9 +37,10 @@ body{
     flex-direction:column;
     background-color: white;
     width: 561px;
-    max-height: 680px;
+    max-width: 650px;
     border:solid 1px #707070;
     border-radius:40px;
+    padding: 100px 5px 100px 5px;
 }
 input{
     width:320px;
@@ -58,6 +60,4 @@ input[type=submit]{
     font-weight: bold;
     font-size:24px;
     color: #007AF3;
-    margin-top:100px;
-    margin-bottom:343px;
 }
